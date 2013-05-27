@@ -12,6 +12,11 @@ module.exports = function(grunt) {
         }]
       }
     },
+    svgo: {
+      optimize: {
+        files: 'img/*.svg'
+      }
+    },
     cssmin: {
       add_banner: {
         options: {
@@ -35,6 +40,8 @@ module.exports = function(grunt) {
   });
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('svgo-grunt');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.registerTask('default', ['imagemin', 'cssmin', 'uglify']);
+
+  grunt.registerTask('default', ['imagemin', 'svgo', 'cssmin', 'uglify']);
 };

@@ -4,11 +4,12 @@
   "version": "1.0.0",
   "author": "James Doyle james2doyle@gmail.com",
   "description": "package-name",
-  "dependencies" : {},
+  "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-cssmin": "*",
     "grunt-contrib-imagemin": "*",
-    "grunt-contrib-uglify": "*"
+    "grunt-contrib-uglify": "*",
+    "svgo-grunt": "0.0.3"
   }
 }
