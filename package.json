@@ -1,0 +1,14 @@
+{
+  "name": "package-name",
+  "preferGlobal": "true",
+  "version": "1.0.0",
+  "author": "James Doyle james2doyle@gmail.com",
+  "description": "package-name",
+  "dependencies" : {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-uglify": "*"
+  }
+}
