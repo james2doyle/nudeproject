@@ -1,9 +1,9 @@
 {
-  "name": "package-name",
+  "name": "nudeproject",
   "preferGlobal": "true",
   "version": "1.0.0",
   "author": "James Doyle james2doyle@gmail.com",
-  "description": "package-name",
+  "description": "nudeproject",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
