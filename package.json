@@ -10,6 +10,7 @@
     "grunt-contrib-cssmin": "*",
     "grunt-contrib-imagemin": "*",
     "grunt-contrib-uglify": "*",
+    "grunt-contrib-clean": "*",
     "svgo-grunt": "0.0.3"
   }
 }
