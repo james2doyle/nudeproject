@@ -1,3 +1,61 @@
-body {
-  background: red;
+body{
+  font:normal normal 400 14px/1.5em "Helevetica Neue",Helevetica,Arial,sans-serf;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
+
+body > * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight:700;
+}
+h1 {
+  font-size:2em;
+  margin:.67em 0;
+}
+h2 {
+  font-size:1.5em;
+  margin:.83em 0;
+}
+h3 {
+  font-size:1.17em;
+  margin:1em 0;
+}
+h4 {
+  font-size:1em;
+  margin:1.33em 0;
+}
+h5 {
+  font-size:.83em;
+  margin:1.67em 0;
+}
+h6 {
+  font-size:.75em;
+  margin:2.33em 0;
+}
+
+.clearfix {
+  zoom:1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content:"";
+  display:table;
+}
+
+.clearfix:after {
+  clear:both;
+}
+
