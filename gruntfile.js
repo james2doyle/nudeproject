@@ -2,6 +2,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    clean: ["js/script.min.js", "css/style.min.css"],
     imagemin: {
       build: {
         files: [{
@@ -38,10 +39,12 @@ module.exports = function(grunt) {
       }
     }
   });
+
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('svgo-grunt');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('default', ['imagemin', 'svgo', 'cssmin', 'uglify']);
+  grunt.registerTask('default', ['clean', 'imagemin', 'svgo', 'cssmin', 'uglify']);
 };
