@@ -3,6 +3,8 @@ nudeproject
 
 A starting point for new web projects, meant for building simple sites or landing pages.
 
+![NudeProject Logo](https://github.com/james2doyle/nudeproject/blob/master/nudeproject.png)
+
 ### grunt
 
 included grunt taks
