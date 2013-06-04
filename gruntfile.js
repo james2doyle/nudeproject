@@ -13,9 +13,19 @@ module.exports = function(grunt) {
         }]
       }
     },
-    svgo: {
-      optimize: {
-        files: 'img/*.svg'
+    svgmin: {
+      options: {
+        plugins: [{
+          removeViewBox: false
+        }]
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'img',
+          src: '*.svg',
+          dest: 'img'
+        }]
       }
     },
     cssmin: {
@@ -43,8 +53,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('svgo-grunt');
+  grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('default', ['clean', 'imagemin', 'svgo', 'cssmin', 'uglify']);
+  grunt.registerTask('default', ['clean', 'imagemin', 'svgmin', 'cssmin', 'uglify']);
 };
