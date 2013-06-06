@@ -11,13 +11,14 @@ included grunt taks
 
 * clean -- removing files before tasks run
 * cssmin -- minify and concat css files
-* imagemin -- compress images and jpeg
+* imagemin -- compress images
 * svgmin -- compress svg files
 * uglify -- minify and concat js
 
 ### stylesheets
 
 * normalize.css
+* basic styles for font normalization
 
 ### javascript
 
