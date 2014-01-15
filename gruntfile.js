@@ -2,39 +2,20 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    clean: ["js/script.min.js", "css/style.min.css"],
     imagemin: {
       build: {
         files: [{
           expand: true,
           cwd: 'img',
-          src: '{,*/}*.{png,jpg,jpeg}',
+          src: '{,*/}*.{png,gif}',
           dest: 'img'
         }]
       }
     },
-    svgmin: {
-      options: {
-        plugins: [{
-          removeViewBox: false
-        }]
-      },
+    sass: {
       dist: {
-        files: [{
-          expand: true,
-          cwd: 'img',
-          src: '*.svg',
-          dest: 'img'
-        }]
-      }
-    },
-    cssmin: {
-      add_banner: {
-        options: {
-          banner: '/*! <%= pkg.name %> v<%= pkg.version %> ' + '<%= grunt.template.today("mm.dd.yyyy") %> */'
-        },
         files: {
-          'css/style.min.css': ['css/**/*.css', '!style.min.css']
+          'css/style.css': 'src/styles/z_site.scss'
         }
       }
     },
@@ -44,17 +25,43 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'js/script.min.js': ['js/**/*.js', '!script.min.js']
+          'js/script.min.js': ['source/scripts/**/*.js']
         }
+      }
+    },
+    autoprefixer: {
+      options: {
+        browsers: ['last 4 versions']
+      },
+      your_target: {
+        src: 'css/style.css',
+        dest: 'css/style.css'
+      }
+    },
+    watch: {
+      options: {
+        livereload: true
+      },
+      templates: {
+        files: ['**/*.html'],
+        tasks: []
+      },
+      styles: {
+        files: ['src/styles/*.scss'],
+        tasks: ['sass']
+      },
+      scripts: {
+        files: ['src/scripts/*.js'],
+        tasks: ['uglify']
       }
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
-  grunt.registerTask('default', ['clean', 'imagemin', 'svgmin', 'cssmin', 'uglify']);
+  grunt.registerTask('default', ['imagemin', 'uglify', 'sass', 'autoprefixer']);
 };

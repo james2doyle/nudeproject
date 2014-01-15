@@ -1,16 +1,19 @@
 {
   "name": "nudeproject",
-  "preferGlobal": "true",
   "version": "1.0.0",
-  "author": "James Doyle james2doyle@gmail.com",
+  "author": {
+    "name": "James Doyle",
+    "email": "james2doyle@gmail.com",
+    "url": "http://ohdoylerules.com/"
+  },
   "description": "nudeproject",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-cssmin": "*",
     "grunt-contrib-imagemin": "*",
     "grunt-contrib-uglify": "*",
-    "grunt-contrib-clean": "*",
-    "grunt-svgmin": "*"
+    "grunt-sass": "*",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-autoprefixer": "~0.3.0"
   }
 }

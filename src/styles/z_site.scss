@@ -1,0 +1,74 @@
+@import "imports/__normalize";
+@import "imports/_grid";
+@import "imports/_mixins";
+
+// [class^="icon"] {
+//   position: relative;
+//   top: 0.1em;
+// }
+
+html {
+  min-height: 100%;
+}
+
+body {
+  font: normal normal 400 14px/1.5em "Helevetica Neue",Helevetica,Arial,sans-serf;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+*, *:after, *:before {
+  @include box-sizing(border-box);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 700
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: .83em 0
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0
+}
+
+h5 {
+  font-size: .83em;
+  margin: 1.67em 0
+}
+
+h6 {
+  font-size: .75em;
+  margin: 2.33em 0
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+}
