@@ -9,15 +9,19 @@ A starting point for new web projects, meant for building simple sites or landin
 
 included grunt taks
 
-* clean -- removing files before tasks run
-* cssmin -- minify and concat css files
 * imagemin -- compress images
-* svgmin -- compress svg files
-* uglify -- minify and concat js
+* uglify -- compress js
+* cssmin -- compress css
+* concat -- combine files
+* sass -- libsass task
+* watch -- livereload
+* autoprefixer -- no more prefixes
 
 ### stylesheets
 
 * normalize.css
+* grid.scss -- simple grid
+* mixins.scss -- simple mixins
 * basic styles for font normalization
 
 ### javascript
@@ -25,16 +29,13 @@ included grunt taks
 modernizr custom build
 
 * cssanimations
+* csscolumns
 * csstransforms
 * csstransforms3d
-* csstransitions
-* canvas
-* audio
-* video
 * localstorage
-* svg
+* websockets
+* webworkers
 * touch
-* webgl
 * shiv
 * cssclasses
 * teststyles
@@ -42,6 +43,6 @@ modernizr custom build
 * testallprops
 * prefixes
 * domprefixes
-* css_boxsizing
+* css_filters
 * script_async
 * script_defer
