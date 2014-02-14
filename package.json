@@ -8,9 +8,16 @@
     "email": "james2doyle@gmail.com",
     "url": "http://ohdoylerules.com/"
   },
-  "dependencies": {},
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "dependencies": {
+    "grunt": "~0.4.1"
+  },
   "devDependencies": {
-    "grunt": "~0.4.1",
     "grunt-contrib-imagemin": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-cssmin": "*",
