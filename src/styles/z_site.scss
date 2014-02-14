@@ -66,9 +66,14 @@ h6 {
 .container {
   width: 100%;
   max-width: 1140px;
-  margin: 0 auto;
+  margin: 15% auto 0;
 }
 
 .center {
   text-align: center;
+  padding: 0 2em;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
