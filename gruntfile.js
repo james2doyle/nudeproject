@@ -2,6 +2,13 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    meta: {
+      banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
+        '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
+        '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
+        '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> (<%= pkg.author.url %>)\n' +
+        '* Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n'
+    },
     imagemin: {
       build: {
         files: [{
@@ -19,13 +26,23 @@ module.exports = function(grunt) {
         }
       }
     },
+    concat: {
+      options: {
+        separator: '\n',
+        stripBanner: true
+      },
+      scripts: {
+        src: ['src/scripts/*.js'],
+        dest: 'js/script.js'
+      }
+    },
     uglify: {
       options: {
-        banner: '/*! <%= pkg.name %> v<%= pkg.version %> ' + '<%= grunt.template.today("mm.dd.yyyy") %> */'
+        banner: '<%= meta.banner %>'
       },
       my_target: {
         files: {
-          'js/script.min.js': ['source/scripts/**/*.js']
+          'js/script.min.js': ['js/script.js']
         }
       }
     },
@@ -36,6 +53,16 @@ module.exports = function(grunt) {
       your_target: {
         src: 'css/style.css',
         dest: 'css/style.css'
+      }
+    },
+    cssmin: {
+      compress: {
+        options: {
+          banner: '<%= meta.banner %>'
+        },
+        files: {
+          'css/style.min.css': ['css/style.css']
+        }
       }
     },
     watch: {
@@ -52,7 +79,7 @@ module.exports = function(grunt) {
       },
       scripts: {
         files: ['src/scripts/*.js'],
-        tasks: ['uglify']
+        tasks: ['concat']
       }
     }
   });
@@ -60,8 +87,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  grunt.registerTask('default', ['imagemin', 'uglify', 'sass', 'autoprefixer']);
+  grunt.registerTask('default', ['sass', 'concat']);
+  grunt.registerTask('build', ['imagemin', 'sass', 'autoprefixer', 'cssmin', 'concat', 'uglify']);
 };
