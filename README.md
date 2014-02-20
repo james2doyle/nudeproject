@@ -28,8 +28,10 @@ included grunt taks
 
 modernizr custom build
 
+* multiplebgs
 * cssanimations
 * csscolumns
+* cssgradients
 * csstransforms
 * csstransforms3d
 * localstorage
@@ -43,6 +45,7 @@ modernizr custom build
 * testallprops
 * prefixes
 * domprefixes
+* css_calc
 * css_filters
 * script_async
 * script_defer
