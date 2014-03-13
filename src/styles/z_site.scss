@@ -63,6 +63,16 @@ h6 {
   margin: 2.33em 0
 }
 
+hr {
+  height: 1px;
+  border: none;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1em 0;
+  background-color: rgba(0,0,0,0.2);
+  width: 100%;
+}
+
 .container {
   width: 100%;
   max-width: 1140px;
