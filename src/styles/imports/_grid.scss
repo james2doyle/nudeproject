@@ -1,6 +1,6 @@
 [class*='col-'] {
   float: left;
-  padding: 0 10px;
+  padding: 0 0.5em;
 }
 
 // [class*='col-']:last-of-type {
@@ -21,11 +21,11 @@
 }
 
 .grid-pad {
-  padding: 20px 0 0px 20px;
+  padding: 1em 0 1em 1em;
 }
 
 .grid-pad > [class*='col-']:last-of-type {
-  padding-right: 20px;
+  padding-right: 1em;
 }
 
 .push-right {
@@ -95,7 +95,7 @@
   width: 83.333%;
 }
 
-.col-9-12 {
+.col-3-4, .col-9-12 {
   width: 75%;
 }
 
