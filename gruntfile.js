@@ -49,7 +49,7 @@ module.exports = function(grunt) {
     },
     autoprefixer: {
       options: {
-        browsers: ['> 5%, last 2 versions, Firefox ESR, Opera 12.1']
+        browsers: ['> 5%', 'last 2 versions']
       },
       your_target: {
         src: 'css/style.css',
