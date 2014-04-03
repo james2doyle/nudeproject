@@ -94,5 +94,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   grunt.registerTask('default', ['sass', 'concat']);
-  grunt.registerTask('build', ['imagemin', 'sass', 'autoprefixer', 'cssmin', 'concat', 'uglify']);
+  grunt.registerTask('build', ['sass', 'autoprefixer', 'cssmin', 'concat', 'uglify', 'imagemin']);
 };
