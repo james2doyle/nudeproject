@@ -133,4 +133,10 @@
     float: left;
     padding: 0;
   }
+  
+  [class*='col-'].m-33 {
+    width: 33.3%;
+    float: left;
+    padding: 0;
+  }
 }
