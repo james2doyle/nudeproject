@@ -77,6 +77,14 @@ hr {
   width: 100%;
 }
 
+table {
+  table-layout: fixed;
+  width: 100%;
+  th {
+    text-align: left;
+  }
+}
+
 .container {
   width: 100%;
   max-width: 1140px;
