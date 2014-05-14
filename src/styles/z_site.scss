@@ -109,6 +109,13 @@ form {
       border: 1px solid rgba(0,0,0,0.5);
     }
   }
+  input[type="submit"], button {
+    width: auto;
+    padding: 0.4em 1em;
+    &:hover {
+      background: black;
+    }
+  }
   textarea {
     // resize: none;
     max-width: 100%; // no annoying >100% stretching
