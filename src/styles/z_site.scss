@@ -84,6 +84,32 @@ table {
   }
 }
 
+form {
+  &, label, input, button, select, textarea {
+    @include inline-block();
+    width: 100%;
+    // these font styles are not inherited from the body!!
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  input, button, select, textarea {
+    outline: none;
+    border: none;
+    margin-bottom: 1em;
+    padding: 0.4em;
+    border: 1px solid rgba(0,0,0,0.2);
+    transition: border 0.2s ease;
+    &:focus {
+      border: 1px solid rgba(0,0,0,0.5);
+    }
+  }
+  textarea {
+    // resize: none;
+    max-width: 100%; // no annoying >100% stretching
+  }
+}
+
 .container {
   width: 100%;
   max-width: 1140px;
