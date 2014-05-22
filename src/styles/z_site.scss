@@ -79,8 +79,14 @@ hr {
 table {
   table-layout: fixed;
   width: 100%;
-  th {
+  th, th[align="left"] {
     text-align: left;
+  }
+  th[align="center"] {
+    text-align: center;
+  }
+  th[align="right"] {
+    text-align: right;
   }
 }
 
