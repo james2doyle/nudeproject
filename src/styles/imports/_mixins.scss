@@ -9,7 +9,7 @@
   opacity: $start;
   -webkit-backface-visibility: hidden;
   transition: opacity 0.2s ease;
-  &:hover {
+  &:hover, &:active {
     opacity: 1;
   }
 }
@@ -18,11 +18,10 @@
   opacity: 1;
   -webkit-backface-visibility: hidden;
   transition: opacity 0.2s ease;
-  &:hover {
+  &:hover, &:active {
     opacity: $end;
   }
 }
-
 
 @mixin image-2x($image, $width, $height, $x, $y, $repeat) {
   background: url("#{$image}.png") $x $y $repeat;
