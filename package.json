@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "a nudeproject",
   "homepage": "http://ohdoylerules.com",
-  "author": {
+  "author": [{
+    "name": "WARPAINT Media",
+    "email": "hello@warpaintmedia.ca",
+    "url": "http://warpaintmedia.ca"
+  }, {
     "name": "James Doyle",
     "email": "james2doyle@gmail.com",
     "url": "http://ohdoylerules.com/"
-  },
+  }],
   "licenses": [
     {
       "type": "MIT",
