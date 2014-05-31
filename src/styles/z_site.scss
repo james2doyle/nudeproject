@@ -1,18 +1,20 @@
+@import "imports/_mixins";
 @import "imports/__normalize";
 @import "imports/_grid";
-@import "imports/_mixins";
 
 // [class^="icon"] {
 //   position: relative;
 //   top: 0.1em;
 // }
 
+$body-font: "Helevetica Neue",Helevetica,Arial,sans-serf;
+
 html {
   min-height: 100%;
 }
 
 body {
-  font: normal normal 400 14px/1.5em "Helevetica Neue",Helevetica,Arial,sans-serf;
+  font: normal normal 400 14px/1.5 $body-font;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;

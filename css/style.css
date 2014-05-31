@@ -277,7 +277,7 @@ html {
   min-height: 100%; }
 
 body {
-  font: normal normal 400 14px/1.5em "Helevetica Neue", Helevetica, Arial, sans-serf;
+  font: normal normal 400 14px/1.5 "Helevetica Neue", Helevetica, Arial, sans-serf;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
