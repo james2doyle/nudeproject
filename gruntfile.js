@@ -10,16 +10,16 @@ module.exports = function(grunt) {
         '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> (<%= pkg.author.url %>)\n' +
         '* Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %>\n*/\n'
     },
-    // imagemin: {
-    //   build: {
-    //     files: [{
-    //       expand: true,
-    //       cwd: 'img',
-    //       src: '{,*/}*.{png,gif}',
-    //       dest: 'img'
-    //     }]
-    //   }
-    // },
+    imagemin: {
+      build: {
+        files: [{
+          expand: true,
+          cwd: 'img',
+          src: '{,*/}*.{png,gif,jpg,jpeg}',
+          dest: 'img'
+        }]
+      }
+    },
     sass: {
       dist: {
         files: {
@@ -85,7 +85,7 @@ module.exports = function(grunt) {
     }
   });
 
-  // grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -94,5 +94,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   grunt.registerTask('default', ['sass', 'concat']);
-  grunt.registerTask('build', ['sass', 'autoprefixer', 'cssmin', 'concat', 'uglify']);
+  grunt.registerTask('build', ['sass', 'autoprefixer', 'cssmin', 'concat', 'uglify', 'imagemin']);
 };
