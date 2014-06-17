@@ -48,9 +48,6 @@ module.exports = function(grunt) {
       }
     },
     autoprefixer: {
-      options: {
-        browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1', 'Android 4']
-      },
       your_target: {
         src: 'css/style.css',
         dest: 'css/style.css'
