@@ -1,1 +1,3 @@
-console.log('js loaded');
+document.addEventListener('DOMContentLoaded', function() {
+  document.body.classList.add('loaded');
+});
