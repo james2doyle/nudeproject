@@ -331,12 +331,14 @@ hr {
 table {
   table-layout: fixed;
   width: 100%; }
-  table th, table th[align="left"] {
+  table th {
     text-align: left; }
-  table th[align="center"] {
-    text-align: center; }
-  table th[align="right"] {
-    text-align: right; }
+    table th[align="left"] {
+      text-align: left; }
+    table th[align="center"] {
+      text-align: center; }
+    table th[align="right"] {
+      text-align: right; }
 
 .placeholder {
   color: rgba(0, 0, 0, 0.5); }
