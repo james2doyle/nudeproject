@@ -191,12 +191,12 @@ table {
 .push-right {
   float: right; }
 
-[class*='col-'].m-50 {
+.m-50 {
   width: 50%;
   float: left;
   padding: 0; }
 
-[class*='col-'].m-33 {
+.m-33 {
   width: 33.3%;
   float: left;
   padding: 0; }
@@ -207,8 +207,6 @@ table {
   [class*='col-'] {
     float: left;
     padding: 0 0.5em; }
-    [class*='col-'].m-50, [class*='col-'].m-33 {
-      width: inherit; }
   .col-1-1 {
     width: 100%; }
   .col-2-3, .col-8-12 {

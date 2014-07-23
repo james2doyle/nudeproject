@@ -32,12 +32,12 @@
   float: right;
 }
 
-[class*='col-'].m-50 {
+.m-50 {
   width: 50%;
   float: left;
   padding: 0;
 }
-[class*='col-'].m-33 {
+.m-33 {
   width: 33.3%;
   float: left;
   padding: 0;
@@ -47,9 +47,9 @@
   [class*='col-'] {
     float: left;
     padding: 0 0.5em;
-    &.m-50, &.m-33 {
-      width: inherit;
-    }
+    // &.m-50, &.m-33 {
+    //   width: inherit;
+    // }
   }
 
   /* Content Columns */
