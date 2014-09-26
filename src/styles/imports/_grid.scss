@@ -35,12 +35,12 @@
 .m-50 {
   width: 50%;
   float: left;
-  padding: 0;
+  padding: 0 !important;
 }
 .m-33 {
   width: 33.3%;
   float: left;
-  padding: 0;
+  padding: 0 !important;
 }
 
 @media screen and (min-width: 768px) {
