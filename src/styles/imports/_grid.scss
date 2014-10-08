@@ -113,6 +113,10 @@
     width: 8.33%
   }
 
+  .col-1-16 {
+    width: 6.25%
+  }
+
   /* Layout Columns */
 
   .col-11-12 {
@@ -133,6 +137,10 @@
 
   .col-7-12 {
     width: 58.33%
+  }
+  
+  .col-7-16 {
+    width: 43.75%
   }
 
   [class*='col-']:last-of-type {
