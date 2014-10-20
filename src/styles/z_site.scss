@@ -100,16 +100,17 @@ table {
   color: rgba(0,0,0,0.5);
 }
 
+label, input, select, textarea, button, button[type="button"], input[type="button"], input[type="reset"], input[type="submit"] {
+  // these font styles are not inherited from the body!!
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 form {
-  &, label, input, button, select, textarea {
+  label, input, button, select, textarea {
     @include inline-block();
     width: 100%;
-    // these font styles are not inherited from the body!!
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  input, button, select, textarea {
     outline: none;
     border: none;
     margin-bottom: 1em;
@@ -120,7 +121,7 @@ form {
       border: 1px solid rgba(0,0,0,0.5);
     }
   }
-  input[type="submit"], button {
+  input[type="submit"], button, button[type="button"], input[type="button"], input[type="reset"], input[type="submit"] {
     width: auto;
     padding: 0.4em 1em;
     &:hover {
