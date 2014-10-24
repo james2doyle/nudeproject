@@ -10,6 +10,9 @@ module.exports = function(grunt) {
         '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> (<%= pkg.author.url %>)\n' +
         '* Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %>\n*/\n'
     },
+    curl: {
+      'src/styles/imports/__normalize.scss': 'https://raw.githubusercontent.com/kristerkari/normalize.scss/master/_normalize.scss'
+    },
     imagemin: {
       build: {
         files: [{
@@ -82,6 +85,7 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-curl');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-sass');
@@ -91,5 +95,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   grunt.registerTask('default', ['sass', 'concat']);
+  grunt.registerTask('update', ['curl']);
   grunt.registerTask('build', ['sass', 'autoprefixer', 'cssmin', 'concat', 'uglify', 'imagemin']);
 };

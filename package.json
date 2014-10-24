@@ -3,15 +3,18 @@
   "version": "1.0.0",
   "description": "a nudeproject",
   "homepage": "http://ohdoylerules.com",
-  "author": [{
-    "name": "WARPAINT Media",
-    "email": "hello@warpaintmedia.ca",
-    "url": "http://warpaintmedia.ca"
-  }, {
-    "name": "James Doyle",
-    "email": "james2doyle@gmail.com",
-    "url": "http://ohdoylerules.com/"
-  }],
+  "author": [
+    {
+      "name": "WARPAINT Media",
+      "email": "hello@warpaintmedia.ca",
+      "url": "http://warpaintmedia.ca"
+    },
+    {
+      "name": "James Doyle",
+      "email": "james2doyle@gmail.com",
+      "url": "http://ohdoylerules.com/"
+    }
+  ],
   "licenses": [
     {
       "type": "MIT",
@@ -22,12 +25,14 @@
     "grunt": "~0.4.1"
   },
   "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "~0.8.1",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-cssmin": "*",
     "grunt-contrib-imagemin": "*",
     "grunt-contrib-uglify": "*",
-    "grunt-contrib-cssmin": "*",
-    "grunt-contrib-concat": "~0.4.0",
-    "grunt-sass": "*",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-autoprefixer": "~0.8.1"
+    "grunt-curl": "^2.0.3",
+    "grunt-sass": "*"
   }
 }
