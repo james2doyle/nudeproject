@@ -9,6 +9,7 @@ A starting point for new web projects, meant for building simple sites or landin
 
 included grunt taks
 
+* curl -- update front-end dependencies
 * imagemin -- compress images
 * uglify -- compress js
 * cssmin -- compress css
@@ -19,7 +20,7 @@ included grunt taks
 
 ### stylesheets
 
-* normalize.css
+* normalize.scss
 * grid.scss -- simple grid
 * mixins.scss -- simple mixins
 * basic styles for font normalization
