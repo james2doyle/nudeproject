@@ -8,6 +8,7 @@
 // }
 
 $body-font: "Helvetica Neue",Helvetica,Arial,sans-serf;
+$heading-font: $body-font;
 
 html {
   min-height: 100%;
@@ -35,8 +36,13 @@ body {
   border: 0;
 }
 
-h1,h2,h3,h4,h5,h6,strong {
+h1,h2,h3,h4,h5,h6,strong,b {
+  font-family: $heading-font;
   font-weight: 700
+}
+
+em,i {
+  font-style: italic;
 }
 
 h1 {
