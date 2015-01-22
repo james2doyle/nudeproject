@@ -136,21 +136,6 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 button[disabled], input[disabled] {
   cursor: default; }
 
-input[type="checkbox"], input[type="radio"] {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0; }
-
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box; }
-
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0; }
@@ -162,6 +147,17 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+  input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; }
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
 
 .grid {
   width: 100%;
@@ -194,19 +190,18 @@ table {
 .m-50 {
   width: 50%;
   float: left;
-  padding: 0; }
+  padding: 0 !important; }
 
 .m-33 {
   width: 33.3%;
   float: left;
-  padding: 0; }
+  padding: 0 !important; }
 
 @media screen and (min-width: 768px) {
-  /* Content Columns */
-  /* Layout Columns */
   [class*='col-'] {
     float: left;
     padding: 0 0.5em; }
+  /* Content Columns */
   .col-1-1 {
     width: 100%; }
   .col-2-3, .col-8-12 {
@@ -237,6 +232,9 @@ table {
     width: 9.09%; }
   .col-1-12 {
     width: 8.33%; }
+  .col-1-16 {
+    width: 6.25%; }
+  /* Layout Columns */
   .col-11-12 {
     width: 91.66%; }
   .col-10-12 {
@@ -247,6 +245,8 @@ table {
     width: 41.66%; }
   .col-7-12 {
     width: 58.33%; }
+  .col-7-16 {
+    width: 43.75%; }
   [class*='col-']:last-of-type {
     padding: 0 0.5em; }
   .grid {
@@ -267,7 +267,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
@@ -287,16 +287,20 @@ body {
 ::-moz-focus-inner {
   border: 0; }
 
-h1, h2, h3, h4, h5, h6, strong {
+h1, h2, h3, h4, h5, h6, strong, b {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
   font-weight: 700; }
+
+em, i {
+  font-style: italic; }
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: .67em 0; }
 
 h2 {
   font-size: 1.5em;
-  margin: 0.83em 0; }
+  margin: .83em 0; }
 
 h3 {
   font-size: 1.17em;
@@ -307,11 +311,11 @@ h4 {
   margin: 1.33em 0; }
 
 h5 {
-  font-size: 0.83em;
+  font-size: .83em;
   margin: 1.67em 0; }
 
 h6 {
-  font-size: 0.75em;
+  font-size: .75em;
   margin: 2.33em 0; }
 
 hr {
@@ -333,7 +337,7 @@ table {
     text-align: left; }
     table th[align="left"] {
       text-align: left; }
-    table th[align="center"] {
+    table th[align="center"], table th[align="middle"] {
       text-align: center; }
     table th[align="right"] {
       text-align: right; }
@@ -350,30 +354,30 @@ table {
 ::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.5); }
 
-form, form label, form input, form button, form select, form textarea {
+label, input, select, textarea, button, button[type="button"], input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale; }
+
+form label, form input, form button, form select, form textarea {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: top;
   zoom: 1;
   *display: inline;
   width: 100%;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale; }
-form input, form button, form select, form textarea {
   outline: none;
   border: none;
   margin-bottom: 1em;
   padding: 0.4em;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  -webkit-transition: border 0.2s ease;
-          transition: border 0.2s ease; }
-  form input:focus, form button:focus, form select:focus, form textarea:focus {
+  transition: border 0.2s ease; }
+  form label:focus, form input:focus, form button:focus, form select:focus, form textarea:focus {
     border: 1px solid rgba(0, 0, 0, 0.5); }
-form input[type="submit"], form button {
+form input[type="submit"], form button, form button[type="button"], form input[type="button"], form input[type="reset"], form input[type="submit"] {
   width: auto;
   padding: 0.4em 1em; }
-  form input[type="submit"]:hover, form button:hover {
+  form input[type="submit"]:hover, form button:hover, form button[type="button"]:hover, form input[type="button"]:hover, form input[type="reset"]:hover, form input[type="submit"]:hover {
     background: black; }
 form textarea {
   max-width: 100%; }
@@ -388,4 +392,6 @@ form textarea {
   padding: 0 2em; }
   .center img {
     max-width: 100%;
+    height: auto; }
+   max-width: 100%;
     height: auto; }
