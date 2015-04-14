@@ -34,7 +34,8 @@ var data = {
 gulp.task('concat', function() {
   gulp.src('src/scripts/*.js')
   .pipe(concat('script.js'))
-  .pipe(gulp.dest('js/'));
+  .pipe(gulp.dest('js/'))
+  .pipe(livereload());
 });
 
 gulp.task('cssmin', function () {
@@ -46,10 +47,11 @@ gulp.task('cssmin', function () {
 });
 
 gulp.task('sass', function () {
-  gulp.src('src/styles/z_site.scss')
+  gulp.src('src/styles/*.scss')
   .pipe(sass())
   .pipe(concat('style.css'))
-  .pipe(gulp.dest('css/'));
+  .pipe(gulp.dest('css/'))
+  .pipe(livereload());
 });
 
 gulp.task('autoprefixer', function () {
@@ -71,9 +73,14 @@ gulp.task('uglify', function() {
   .pipe(gulp.dest('js/'));
 });
 
+gulp.task('reload', function() {
+  gulp.src('**/*.{php,html}')
+  .pipe(livereload());
+});
+
 gulp.task('watch', function() {
   livereload.listen();
-  gulp.watch('**/*.{html,php}', []);
+  gulp.watch('**/*.{php,html}', ['reload']);
   gulp.watch('src/styles/*.scss', ['sass']);
   gulp.watch('src/scripts/*.js', ['concat']);
 });
