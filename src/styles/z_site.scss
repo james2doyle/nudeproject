@@ -87,8 +87,12 @@ hr {
 table {
   table-layout: fixed;
   width: 100%;
+  td {
+    padding: 0 1em 1em;
+  }
   th {
     text-align: left;
+    padding: 1em;
     &[align="left"] {
       text-align: left;
     }
